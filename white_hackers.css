@@ -1,0 +1,114 @@
+.Voznyk, .Tim, .Linus, .Richard, .Kevin
+{
+    text-align: justify;
+    margin-top:5px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding: 10px;
+}
+body{
+    width: 100%;
+    height: 100%;
+    font-family: "BlackerSansLight", sans-serif;
+}
+p
+{
+    font-size: 20px;
+    margin-bottom: 0px;
+    margin-top: 2px;
+}
+
+h1{
+    text-align: center;
+}
+
+body
+{
+    background-image: url('BackgroundForNote.png');
+    background-size: cover;
+}
+h2{
+    color: white;
+}
+.main{
+    width: 220px;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(193, 206, 206);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main::before
+{
+    content: '';
+    background: linear-gradient(45deg, #00CED1, #483D8B);
+    position: absolute;
+    bottom: -2px;
+    right:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(10px);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    animation: glowing 5s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.main:active
+{
+    color: rgb(193, 206, 206);
+}
+.main:active::after
+{
+    background: transparent;
+}
+.main:hover::before
+{
+    opacity: 1;
+}
+.main::after
+{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(193, 214, 213);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+.main{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.index
+{
+    color:black;
+    text-decoration: none;
+}
+@media (max-width:600px)
+{
+    body{
+        font-size: 14px;
+        font-family: "BlackerSansLight", sans-serif;
+        background-image: url('backgroundForPhone.png');
+        background-size: cover;
+    }
+    h1{
+        text-align: center;
+    }
+    p{
+        width: 100%;
+        margin-bottom: 0px;
+        margin-top: 2px;
+    }
+}
